@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pets Shop</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <style>
+    .carousel-inner img {
+      height: 50px;
+      width: 100%;
+      background-color: powderblue;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel"
+      style=" margin:0px,0px,0px,0px; padding:0px,0px,0px,0px;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="width:100%px;">
+        <div class="item active">
+          <img src="assets/images/dogs/dog2.jpg" alt="Los Angeles" style="height:300px; width:100%px ">
+        </div>
+
+        <div class="item">
+          <img src="assets/images/cats/cat.jpg" alt="Chicago" style="height:300px; width:100%px ">
+        </div>
+
+        <div class="item">
+          <img src="assets/images/dogs/dog.jpg" alt="New york" style="height:300px; width:100%px ">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand" style=" margin:0px; padding:0px;">
+    <div class="container">
+      <div class="container">
+        <div class="container-fluid">
+          <div class="navbar-header" style=" padding:0px,0px,0px,30px;">
+            <a class="navbar-brand" href="#"> <img src="dog2.jpg" style="height:40px; "></a>
+          </div>
+
+          <ul class="nav nav-tabs" style=" margin:15px; padding:0px,0px,0px,10px;">
+            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+            <li><a data-toggle="tab" href="#Cat">Cats</a></li>
+            <li><a data-toggle="tab" href="#Dog">Dogs</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#Pets">Pets<span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#turtle">turtle</a></li>
+                <li><a data-toggle="tab" href="#Birds">Birds</a></li>
+                <li><a data-toggle="tab" href="#Fish">Fishs</a></li>
+              </ul>
+            </li>
+
+
+            <form class="navbar-form navbar-left" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+
+              <li style="width-left:500px;"><a href="#signup" data-toggle="tab"><span
+                    class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#login" data-toggle="tab"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </ul>
+  </nav>
+  </div>
+  <div class="tab-content">
+    <div id="login" class="tab-pane fade">
+      <form action="/action_page.php" class="was-validated" style="padding:20px">
+        <div class="form-group">
+          <label for="uname">Username:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+
+    <div id="signup" class="tab-pane fade">
+      <h2>Sign Up</h2>
+
+      <form action="/action_page.php" style="padding:20px">
+        <div class="form-group">
+          <label for="uname">FirstName:</label>
+          <input type="text" class="form-control" id="Fname" placeholder="Enter FirstName" name="Fname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="Lname">LastName:</label>
+          <input type="text" class="form-control" id="Lname" placeholder="Enter LastName" name="Lname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+          <label for="Pname">Password:</label>
+          <input type="text" class="form-control" id="Pname" placeholder="Enter Password" name="Pname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="submit" value="Submit">
+      </form>
+
+      <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    </div>
+
+    <div id="turtle" class="tab-pane fade">
+
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/Box turtle.png" target="_blank">
+                <img src="assets/images/turtle/Box turtle.png" alt="Box turtle" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Box turtle <br> Lifespan: Pond slider: 30years <br> Mass: Pond slider: 240g <br> Encyclopedia of Life
+                <br> Scientific name: Trachemys <br> Higher classification: Deirochelyinae</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/Slider turtle.png" target="_blank">
+                <img src="assets/images/turtle/Slider turtle.png" alt="Slider turtle"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Slider turtle <br> Lifespan:30years (In the wild) <br> Mass: 240g (Adult) Encyclopedia <br> of Life
+                <br> Order: Testudines Scientific name: Trachemys scripta Conservation status: Least Concern (Population
+                stable) <br> Encyclopedia of Life <br> Did you know: The yellow-bellied slider turtle can be found ina
+                wide range of freshwater habitats, rivers, </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/European pond turtle.png" target="_blank">
+                <img src="assets/images/turtle/European pond turtle.png" alt="European pond turtle"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>European pond turtle <br> Family: Emydidae <br> Order: Testudines <br> Class: Reptilia <br> Scientific
+                name: Emys orbicularis <br> Conservation status: Near Threatened Encyclopedia </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/Spotted turtle.png" target="_blank">
+                <img src="assets/images/turtle/Spotted turtle.png" alt="Spotted " style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Spotted turtle <br> Kingdom: Animalia <br> Scientific name: Graptemys <br> Family: Emydidae <br>
+                Higher classification: Deirochelyinae <br> Order: Turtle </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/Cooters.png" target="_blank">
+                <img src="assets/images/turtle/Cooters.png" alt="Cooters" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Cooters <br> Scientific name: Clemmys guttata <br> Family: Emydidae <br> Higher classification: Clemmys
+                <br> Order: Turtle</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/Russian tortoise.png" target="_blank">
+                <img src="assets/images/turtle/Russian tortoise.png" alt="Russian tortoise"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Russian tortoise <br> Scientific name: Testudo horsfieldii <br> Class: Reptilia <br> Family:
+                Testudinidae <br> Conservation status: Vulnerable Encyclopedia of Life <br> Higher classification:
+                Palearctic tortoises</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/turtle/Map turtle.png" target="_blank">
+                <img src="assets/images/turtle/Map turtle.png" alt="Map turtle" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Map turtle <br> Class: Reptilia <br> Scientific name: Chrysemys picta <br> Family: Emydidae <br>
+                Kingdom: Animalia <br> Higher classification: Painted turtles</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="Dog" class="tab-pane fade">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/dogs/Rottweiler.jpg" target="_blank">
+                <img src="assets/images/dogs/Rottweiler.jpg" alt="Rottweiler" style="width:100%; hieght:20px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Rottweiler</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/dogs/Pug.jpg" target="_blank">
+                <img src="assets/images/dogs/Pug.jpg" alt="Pug" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Pug </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/dogs/Standard schnauzer.jpg" target="_blank">
+                <img src="assets/images/dogs/Standard schnauzer.jpg" alt="Slider turtle"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Standard schnauzer </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/dogs/Shih Tzu.jpg" target="_blank">
+                <img src="assets/images/dogs/Shih Tzu.jpg" alt="Shih Tzu " style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Shih Tzu </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/dogs/German shepherd.jpg" target="_blank">
+                <img src="assets/images/dogs/German shepherd.jpg" alt="German shepherd"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>German shepherd </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Cat" class="tab-pane fade">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/Saved Photos.jpg" target="_blank">
+                <img src="assets/images/cats/Saved Photos.jpg" alt="Saved Photos" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Saved Photos</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/Siamese cat.jpg" target="_blank">
+                <img src="assets/images/cats/Siamese cat.jpg" alt="Siamese cat" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Siamese cat </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/Scottish fold.jpg" target="_blank">
+                <img src="assets/images/cats/Scottish fold.jpg" alt="Scottish fold" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Scottish fold </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/Ragdoll.jpg" target="_blank">
+                <img src="assets/images/cats/Ragdoll.jpg" alt="Ragdoll" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Ragdoll</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/British shorthair.jpg" target="_blank">
+                <img src="assets/images/cats/British shorthair.jpg" alt="British shorthair"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>British shorthair</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/Maine coon.jpg" target="_blank">
+                <img src="assets/images/cats/Maine coon.jpg" alt="Maine coon" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Maine coon</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/cats/Munchkin cat.jpg" target="_blank">
+                <img src="assets/images/cats/Munchkin cat.jpg" alt="Munchkin cat" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Munchkin cat</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Birds" class="tab-pane fade">
+      <div class="container">
+        <div class="row text-center">
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/birds/Red-billed streamertail.jpg" target="_blank">
+                <img src="assets/images/birds/Red-billed streamertail.jpg" alt="Red-billed streamertail"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Red-billed streamertail</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/birds/Rufous hummingbird.jpg" target="_blank">
+                <img src="assets/images/birds/Rufous hummingbird.jpg" alt="Rufous hummingbird"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Rufous hummingbird</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/birds/True parrot.jpg" target="_blank">
+                <img src="assets/images/birds/True parrot.jpg" alt="True parrot" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>True parrot</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/birds/Violetear.jpg" target="_blank">
+                <img src="assets/images/birds/Violetear.jpg" alt="Violetear" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Violetear</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div id="Fish" class="tab-pane fade">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/fish/Siamese fighting fish.jpg" target="_blank">
+                <img src="assets/images/fish/Siamese fighting fish.jpg" alt="Siamese fighting fish"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Siamese fighting fish</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/fish/Goldfish.jpg" target="_blank">
+                <img src="assets/images/fish/Goldfish.jpg" alt="Goldfish" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Goldfish </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/fish/Freshwater angelfish.jpg" target="_blank">
+                <img src="assets/images/fish/Freshwater angelfish.jpg" alt="Freshwater angelfish"
+                  style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p> Freshwater angelfish </p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="assets/images/fish/Ram cichlid.jpg" target="_blank">
+                <img src="assets/images/fish/Ram cichlid.jpg" alt="Ram cichlid" style="width:100%; hieght:100px  ">
+                <div class="caption">
+                  <p>Open.</p>
+                </div>
+              </a>
+              <p>Ram cichlid</p>
+              <button class="btn" style="background-color:Defoult">Buy Pet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="home" class="tab-pane active">
+      <div class="container">
+        <div class="row text-center">
+
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/fish/Goldfish.jpg" target="_blank">
+              <img src="assets/images/fish/Goldfish.jpg" alt="Goldfish" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p> Goldfish </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/turtle/European pond turtle.png" target="_blank">
+              <img src="assets/images/turtle/European pond turtle.png" alt="European pond turtle"
+                style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/turtle/ turtle.png" target="_blank">
+              <img src="assets/images/turtle/Slider turtle.png" alt="Slider turtle" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/videos/Hamster Eating.mp4" target="_blank">
+              <video width="100%px" height="100%px" controls>
+                <source src="assets/videos/Hamster Eating.mp4" type="video/mp4">
+              </video>
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/fish/ fighting fish.jpg" target="_blank">
+              <img src="assets/images/fish/Siamese fighting fish.jpg" alt="Siamese fighting fish"
+                style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p>Siamese fighting fish</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/dogs/Pug.jpg" target="_blank">
+              <img src="assets/images/dogs/Pug.jpg" alt="Pug" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p> Pug </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/videos/Close-Up Video Of Bird.mp4" target="_blank">
+              <video width="100%px" height="100%px" controls>
+                <source src="assets/videos/Close-Up Video Of Bird.mp4" type="video/mp4">
+              </video>
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/fish/Ram cichlid.jpg" target="_blank">
+              <img src="assets/images/fish/Ram cichlid.jpg" alt="Ram cichlid" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p>Ram cichlid</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/cats/Siamese cat.jpg" target="_blank">
+              <img src="assets/images/cats/Siamese cat.jpg" alt="Siamese cat" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p> Siamese cat </p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/birds/True parrot.jpg" target="_blank">
+              <img src="assets/images/birds/True parrot.jpg" alt="True parrot" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p>True parrot</p>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/videos/vdog.mp4" target="_blank">
+              <video width="100%px" height="100%px" controls>
+                <source src="assets/videos/vdog.mp4" type="video/mp4">
+              </video>
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/videos/Bird Eating.mp4" target="_blank">
+              <video width="100%px" height="100%px" controls>
+                <source src="assets/videos/Bird Eating.mp4" type="video/mp4">
+              </video>
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/dogs/Standard schnauzer.jpg" target="_blank">
+              <img src="assets/images/dogs/Standard schnauzer.jpg" alt="Slider turtle"
+                style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p> Standard schnauzer </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/cats/Scottish fold.jpg" target="_blank">
+              <img src="assets/images/cats/Scottish fold.jpg" alt="Scottish fold" style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p> Scottish fold </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/dogs/Shih Tzu.jpg" target="_blank">
+              <img src="assets/images/dogs/Shih Tzu.jpg" alt="Shih Tzu " style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p> Shih Tzu </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="assets/images/dogs/German shepherd.jpg" target="_blank">
+              <img src="assets/images/dogs/German shepherd.jpg" alt="German shepherd"
+                style="width:100%; hieght:100px  ">
+              <div class="caption">
+                <p>Open.</p>
+              </div>
+            </a>
+            <p>German shepherd </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
